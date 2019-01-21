@@ -1,0 +1,46 @@
+.form{
+
+}
+
+.form--style{
+
+}
+
+input[type=text]{
+
+    border: 0;
+    outline: 0;
+    background: transparent;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    padding: 15px;
+    width: 30%;
+}
+
+input[type=text]:focus{
+    box-shadow: 1px 2px 3px 1px solid grey;
+    border-color: 1px solid black;
+    -webkit-animation: mymove 3s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 3s infinite;
+}
+
+input[type=submit]{
+    background-color: rgb(54, 81, 172);
+    color: white;
+    outline: 0;
+    border: 0;
+    padding: 15px;
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+50% {box-shadow: 2px 4px 6px rgb(189, 172, 172);}
+}
+
+@keyframes mymove {
+50% {box-shadow: 2px 4px 6px rgb(189, 172, 172);}
+}
+
+
+

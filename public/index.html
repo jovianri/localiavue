@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Localia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+    <link href="./www/vendor/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./www/vendor/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./www/vendor/hover/hover-min.css" rel="stylesheet">
+    <link href="./www/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body class="body" style="font-family:'Raleway'">
+    <main>
+        <div class="l-landing-page" id="main-container">
+            <div class="l-landing-page__header">
+
+                <div class="menu">
+
+                    <div class="menu__item menu__item--logo"></div>
+
+                    <div class="menu__item menu__item--default">
+                        <form class="form form--style" v-on:submit.prevent="buscar" action="/index.html">
+                            <i class="fas fa-search"></i>
+                            <input type="text" v-model="ciudad" placeholder="Lugares.." name="search" maxlength="50" id="ciudadBuscar">
+                            <input type="submit" value="Buscar"></input>
+                        </form>
+                    </div>
+
+                    <div class="menu__item menu__item--content" onclick=docollapsible()>
+                        <i class="fas fa-bars fa-3x"></i>
+                    </div>
+
+                    <div class="menu__item menu__item--collapsible" id="collapsible">
+                        <div class="submenu-danger" id="submenuDanger">
+
+                            <div class="submenu-danger__item"> About</div>
+                            <div class="submenu-danger__item" v-on:click="showCart"> Shopping Cart</div>
+                            <div class="submenu-danger__item"> Login</div>
+
+                            <!-- <prueba> -->
+                            <!-- <router-link to="/prueba" class="submenu-danger__item">About</router-link> -->
+                            <!-- </prueba> -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="l-landing-page__content l-landing-page__content--style">
+
+                <div class="grid grid--1col" id="content-container">
+
+                    <div class="grid--area1">
+
+                        <div class="card" id="cardOne">
+                            <div class="slider">
+                                <!-- Made with Bootstrap -->
+                                <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+                                    <!-- Overlay -->
+                                    <div class="overlay"></div>
+
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#bs-carousel" data-slide-to="1"></li>
+                                        <li data-target="#bs-carousel" data-slide-to="2"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="item slides active">
+                                            <div class="slide-1"></div>
+                                            <div class="hero">
+                                                <hgroup>
+                                                    <h1>Organiza tus eventos</h1>
+                                                    <h3>Sin papeleos, sin historias</h3>
+                                                </hgroup>
+                                                <button class="btn btn-hero btn-lg" role="button">Alquila ya</button>
+                                            </div>
+                                        </div>
+                                        <div class="item slides">
+                                            <div class="slide-2"></div>
+                                            <div class="hero">
+                                                <hgroup>
+                                                    <h1>A tu medida</h1>
+                                                    <h3>Elije entre una amplia gama de locales</h3>
+                                                </hgroup>
+                                                <button class="btn btn-hero btn-lg" role="button">Quiero verlo</button>
+                                            </div>
+                                        </div>
+                                        <div class="item slides">
+                                            <div class="slide-3"></div>
+                                            <div class="hero">
+                                                <hgroup>
+                                                    <h1>Miles de locales</h1>
+                                                    <h3>A sólo un clic</h3>
+                                                </hgroup>
+                                                <button class="btn btn-hero btn-lg" role="button">Ver alquileres</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="grid--area2">
+                        <div id="app">
+                            <lista-local></lista-local>
+                        </div>
+                        <div class="card" id="cardTwo">
+                            <div class="lastSeen">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="l-landing-page__footer">
+                <div class="flex flex--footer flex--espaciado">
+
+                    <ul class="submenu">
+                        <li class="submenu__item submenu__item--titulo">Lorem</li>
+                        <li class="submenu__item">Ipsum</li>
+                        <li class="submenu__item">Dolor</li>
+                        <li class="submenu__item">Sit</li>
+                    </ul>
+
+                    <ul class="submenu">
+                        <li class="submenu__item submenu__item--titulo">Lorem</li>
+                        <li class="submenu__item">Ipsum</li>
+                        <li class="submenu__item">Dolor</li>
+                        <li class="submenu__item">Sit</li>
+                    </ul>
+
+                    <ul class="submenu">
+                        <li class="submenu__item submenu__item--titulo">Lorem</li>
+                        <li class="submenu__item">Ipsum</li>
+                        <li class="submenu__item">Dolor</li>
+                        <li class="submenu__item">Sit</li>
+                    </ul>
+
+                    <ul class="submenu">
+                        <li class="submenu__item submenu__item--titulo">Lorem</li>
+                        <li class="submenu__item">Ipsum</li>
+                        <li class="submenu__item">Dolor</li>
+                        <li class="submenu__item">Sit</li>
+                    </ul>
+
+                </div>
+
+                <div class="flex flex--horizontal">
+                    <ul class="submenu--social-networks">
+                        <li class="submenu__item submenu__item--inline"><a href="#" class="icon icon--instagram fab fa-instagram"></a></li>
+                        <li class="submenu__item submenu__item--inline"><a href="#" class="icon icon--facebook fab fa-facebook-f"></a>
+                        <li class="submenu__item submenu__item--inline"><a href="#" class="icon icon--twitter fab fa-twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalVistaRapida" tabindex="-1" role="dialog" aria-labelledby="modalVistaRapidaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalVistaRapidaLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Alquilar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="./www/vendor/vue/vue.js"></script><!--  VueJS -->
+    <script src="./www/vendor/vue/vue-router.js"></script><!--  VueJS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!-- Axios Ajax connection -->
+    <script src="./www/vendor/jquery/jquery-3.3.1.min.js"></script><!--  JQuery -->
+    <script src="./www/vendor/bootstrap-3.2.0/js/bootstrap.min.js"></script><!--  Boostrap JS -->
+
+
+    <!-- Model -->
+    <script src="./www/js/repository.js"></script>
+    <script src="./www/js/articulo.js"></script>
+    <script src="./www/js/local.js"></script>
+    <script src="./www/js/carrito.js"></script>
+    <script src="./www/js/main.js"></script>
+</body>
+
+</html>

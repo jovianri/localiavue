@@ -1,0 +1,55 @@
+.grid{
+    display: grid;
+}
+
+
+// GRID ELEMENTS
+.grid--area1{
+    grid-area: filter;
+}
+
+.grid--area2{
+    grid-area: content;
+}
+
+.grid--area3{
+    grid-area: map;
+}
+
+
+// GRID STRUCTURES 
+.grid--complex{
+    grid-template-areas:
+    'filter content map';
+}
+
+.grid--1col{
+    grid-template-areas:
+    'content'
+    'filter';
+}
+
+
+
+// MEDIA QUERIES
+@media all and (max-width: 810px) { 
+    .grid--complex{
+        grid-template-rows:
+        '0fr 1fr 0fr';
+    }
+    
+    .filter{
+        display: none;
+    }
+
+    // make menu collapsible
+  }
+
+@media all and (max-width: 1200px) {
+    .grid--area3{
+        display: none;
+    }
+
+  }
+
+

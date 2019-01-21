@@ -1,0 +1,34 @@
+.submenu{
+
+}
+
+@media all and (max-width: 790px) {
+    .submenu {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .submenu__item{
+        text-align: center;
+        margin: auto;
+    }
+  }
+
+.submenu--social-networks{
+    padding: 5px 0;
+}
+
+.submenu--social-networks .submenu__item{ 
+    padding: 0;
+}
+.submenu__item{
+    padding: 10px;
+}
+
+.submenu__item--titulo{
+    font-weight: bold;
+}
+
+.submenu__item--inline{
+    display: inline;
+}

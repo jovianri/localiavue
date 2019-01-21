@@ -1,0 +1,15 @@
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+@mixin flex($tipo){
+    display: flex;
+    flex-wrap: wrap;
+    @if($tipo == "horizontal"){
+        flex-direction: row;
+    }@else{
+        flex-direction: column;
+    }
+}

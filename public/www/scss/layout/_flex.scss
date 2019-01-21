@@ -1,0 +1,32 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+
+@media all and (max-width: 500px) {
+    .flex {
+      flex-direction: column;
+    }
+    .flex--footer {
+        flex-direction: column;
+    }
+    .flex--footer .submenu__item{
+        text-align: center;
+    }
+}
+
+
+.flex--footer{
+    flex-direction: row;
+}
+.flex--horizontal{
+    flex-direction: row;
+}
+.flex--espaciado{
+    justify-content: space-around;
+}
+.flex--vertical{
+    flex-direction: column;
+}

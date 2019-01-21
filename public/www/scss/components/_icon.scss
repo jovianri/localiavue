@@ -1,0 +1,26 @@
+.icon{
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 1px;
+    color: white;
+
+}
+
+.icon:hover{
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.icon--facebook{
+    background: #3B5998;
+}
+
+.icon--twitter{
+    background: #55ACEE;
+}
+.icon--instagram{
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}

@@ -1,0 +1,23 @@
+.menu-lateral{
+    @include flex("vertical");
+    height: 96%;
+}
+
+.menu-lateral__item{
+    padding: 5%;
+    font-family: $font;
+}
+
+.menu-lateral__item--titulo{
+    font-weight: bold;
+    font-size: $size-xxl;
+    margin-bottom: 30px;
+}
+
+.menu-lateral__item--default{
+    font-size: $size-m;
+}
+
+.menu-lateral__icon{
+    padding: 0 15px;
+}

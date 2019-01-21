@@ -1,0 +1,32 @@
+.l-landing-page{
+    display: grid;
+    grid-template-areas: 'header'
+                         'content'
+                         'footer';
+}
+
+// @media (max-width:700px){
+//     .grid-pagina{
+//         grid-template-areas: 'header'
+//                              'content'
+//                              'footer';
+//     }
+// }
+
+.l-landing-page__header{
+    grid-area: header;
+
+}
+
+.l-landing-page__content{
+    grid-area: content;
+}
+
+.l-landing-page__content--style{
+	margin-bottom: 20%;
+}
+
+.l-landing-page__footer{
+    grid-area: footer;
+}
+
